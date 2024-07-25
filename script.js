@@ -36,11 +36,24 @@ function loaderAnimation() {
 
   tl.to(".home .circle", {
     scale: 0,
-    duration: 1.6,
+    duration: 1,
   });
 
   tl.to(".loader-container, .home .circle", {
     display: "none",
+  });
+
+  tl.from(".socials .icon", {
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.2,
+  });
+
+  tl.from(".text h1", {
+    y: 150,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.3,
   });
 }
 
