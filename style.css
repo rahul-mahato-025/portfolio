@@ -78,9 +78,10 @@ main {
   min-height: 100vh;
   background-color: #130b1c;
   position: relative;
+  border-bottom: 2px solid white;
 }
 
-.home .circle {
+/* .home .circle {
   width: 1vw;
   height: 1vw;
   border-radius: 50%;
@@ -90,7 +91,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-}
+} */
 
 .socials {
   width: 100%;
@@ -115,7 +116,7 @@ main {
   object-fit: cover;
 }
 
-.text-container {
+.home-text-container {
   width: 100%;
   color: var(--txt-primary);
   justify-self: start;
@@ -125,18 +126,18 @@ main {
   /* background-color: aqua; */
 }
 
-.text-container :nth-child(2),
-.text-container :nth-child(3) {
+.home-text-container :nth-child(2),
+.home-text-container :nth-child(3) {
   margin-left: 15%;
 }
 
-.text {
+.home-text {
   width: fit-content;
   position: relative;
   overflow: hidden;
 }
 
-.text h1 {
+.home-text h1 {
   font-size: 8vw;
   font-weight: 600;
   text-transform: uppercase;
@@ -152,3 +153,98 @@ main {
   position: absolute;
   left: 10%;
 } */
+
+/* About Section */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-dark);
+  border-bottom: 2px solid white;
+  color: var(--txt-primary);
+}
+
+.about-heading {
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aquamarine; */
+  position: relative;
+}
+
+.about-heading img {
+  scale: 0.6;
+}
+
+.about-heading h1 {
+  font-size: 4vw;
+  font-weight: 600;
+}
+
+.about-heading div {
+  overflow: hidden;
+  /* background-color: red; */
+  position: relative;
+}
+
+.about-heading::after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1vh;
+  border-bottom: 5px solid var(--btn-primary);
+  bottom: 15%;
+  left: 48%;
+}
+
+.about-heading-2 {
+  position: absolute;
+  top: 0;
+}
+
+.about-heading-2 span {
+  font-family: serif;
+  font-style: italic;
+  font-weight: 900;
+  -webkit-text-stroke: 1px var(--txt-primary);
+  color: transparent;
+  opacity: 0;
+}
+
+.about-content {
+  width: 100vw;
+  height: 80vh;
+  /* background-color: #ff7d7b; */
+  padding: 0 10vw;
+}
+
+.about-text {
+  /* background-color: red; */
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.about-text p {
+  font-size: 1.8vw;
+  line-height: 1.6;
+  font-weight: 200;
+  color: #fefefe58;
+}
+
+.about-img {
+  width: 30%;
+  height: 100%;
+  /* background-color: aquamarine; */
+}
+
+.about-img img {
+  scale: 0.5;
+  object-fit: cover;
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+}

@@ -1,8 +1,12 @@
 const circle = document.querySelector(".cirlce");
 
-const loaderText = document.querySelector(".loader-container h1");
+const aboutTextParagraphs = document.querySelectorAll(".about-text p");
 
-const loaderContainerClass = ".loader-container";
+const aboutHeadings = document.querySelectorAll(".about-heading h1");
+
+const aboutHeadingDiv = document.querySelector(".about-heading div");
+
+const loaderText = document.querySelector(".loader-container h1");
 
 function loaderAnimation() {
   const tl = gsap.timeline();
@@ -57,4 +61,74 @@ function loaderAnimation() {
   });
 }
 
-loaderAnimation();
+function addSpanToLetters(text) {
+  let spanText = "";
+  const splittedText = text.split("");
+  splittedText.forEach((letter) => {
+    spanText += `<span>${letter}</span>`;
+  });
+  return spanText;
+}
+
+function triggerTransformTextAnimation(container, event, text1, text2) {
+  const tl = gsap.timeline();
+
+  container.addEventListener(event, function () {
+    if (tl.isActive()) return;
+
+    tl.to(text1, {
+      opacity: 0,
+      duration: 0.02,
+      stagger: 0.02,
+    });
+
+    tl.to(
+      text2,
+      {
+        opacity: 1,
+        duration: 0.02,
+        // delay: 0.022,
+        stagger: 0.02,
+      },
+      "<"
+    );
+  });
+}
+
+function aboutPageAnimation() {
+  aboutTextParagraphs.forEach((paragraph) => {
+    paragraph.innerHTML = addSpanToLetters(paragraph.textContent);
+  });
+
+  gsap.to(".about-text span", {
+    color: "#fefefe",
+    stagger: 0.5,
+    scrollTrigger: {
+      trigger: ".about-text span",
+      start: "top 100%",
+      end: "top 20%",
+      scrub: 3,
+    },
+  });
+
+  aboutHeadings.forEach((heading) => {
+    heading.innerHTML = addSpanToLetters(heading.textContent);
+  });
+
+  triggerTransformTextAnimation(
+    aboutHeadingDiv,
+    "mouseenter",
+    ".about-heading-1 span",
+    ".about-heading-2 span"
+  );
+
+  triggerTransformTextAnimation(
+    aboutHeadingDiv,
+    "mouseleave",
+    ".about-heading-2 span",
+    ".about-heading-1 span"
+  );
+}
+
+// loaderAnimation();
+aboutPageAnimation();
