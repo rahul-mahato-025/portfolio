@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="loader-container flex-row justify-center align-center">
+      <div class="circle"></div>
+      <h1>0</h1>
+    </div>
     <main>
-      <!-- <div class="loader-container flex-row align-center justify-center">
-        <div class="circle"></div>
-        <h1>0</h1>
-      </div> -->
       <section class="home flex-col">
         <div class="circle"></div>
         <div class="socials flex-row">
@@ -29,7 +37,6 @@
 
         <div class="home-text-container">
           <div class="home-text">
-            <!-- <div class="circle"></div> -->
             <h1>Welcome</h1>
           </div>
           <div class="home-text">
@@ -40,10 +47,10 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="about" data-scroll data-scroll-speed="-1">
         <div class="about-heading flex-row">
           <img src="assets/images/boy-avatar.png" alt="" />
-          <div>
+          <div class="heading-text">
             <h1 class="about-heading-1">About Me</h1>
             <h1 class="about-heading-2">About Me</h1>
           </div>
@@ -61,13 +68,207 @@
               knowledge in this field.
             </p>
           </div>
-          <div class="about-img flex-row">
+          <div class="about-img flex-row" data-scroll data-scroll-speed="-2">
             <img src="assets/images/about-img.png" alt="" />
           </div>
         </div>
       </section>
-      <section class="projects"></section>
+      <section class="projects flex-row" data-scroll data-scroll-speed="-2">
+        <div class="projects-intro flex-row scroll-item">
+          <h1>My Projects ➡️</h1>
+        </div>
+        <div class="project1 flex-row scroll-item">
+          <div class="project1-img-container flex-col">
+            <div class="project1-img">
+              <img src="assets/images/funshare1.png" alt="" />
+            </div>
+            <div class="project1-img">
+              <img src="assets/images/funshare2.png" alt="" />
+            </div>
+          </div>
+          <div class="project1-text-container flex-col">
+            <div class="project1-heading flex-col">
+              <h1>Funshare</h1>
+              <h3>
+                A web based file sharing application, made using NodeJS /
+                ExpressJS and MongoDB.
+              </h3>
+              <div class="tech-stack-container flex-row">
+                <div class="tech-stack-item">
+                  <img src="assets//images/html.png" alt="" />
+                </div>
+                <div class="tech-stack-item">
+                  <img src="assets//images/nodejs.png" alt="" />
+                </div>
+                <div class="tech-stack-item">
+                  <img src="assets//images/mongo.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="btn flex-row" data-scroll>
+              <i class="ri-arrow-right-line"></i>
+              <div class="flex-row align-center justify-center">
+                <span
+                  ><a href="http://funshare.onrender.com/"
+                    >View Project</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills flex-row" data-scroll data-scroll-speed="5">
+        <div class="skills-content flex-col">
+          <div
+            class="skills-heading flex-row align-center"
+            data-scroll
+            data-scroll-speed="-1"
+          >
+            <img src="assets/images/skills.png" alt="" />
+            <div class="heading-text">
+              <h1 class="skills-heading-1">Skills</h1>
+              <h1 class="skills-heading-2">Skills</h1>
+            </div>
+          </div>
+          <div class="skills-text flex-col justify-center">
+            <div class="skill-item">
+              <h3>Languages:</h3>
+              <h4>JavaScript, Java</h4>
+              <div class="underline"></div>
+            </div>
+            <div class="skill-item">
+              <h3>Framework / Libraries:</h3>
+              <h4>ExpressJS, ReactJS</h4>
+              <div class="underline"></div>
+            </div>
+            <div class="skill-item">
+              <h3>Database:</h3>
+              <h4>MySQL, MongoDB</h4>
+              <div class="underline"></div>
+            </div>
+            <div class="skill-item">
+              <h3>Tools:</h3>
+              <h4>Git, Postman</h4>
+              <div class="underline"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-marquee flex-row">
+          <!-- <div class="marque-full marque-full-1 flex-col">
+            <div class="marquee-container flex-col">
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+            </div>
+            <div class="marquee-container flex-col">
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+            </div>
+          </div> -->
+
+          <div class="marque-full marque-full-1 flex-col">
+            <div class="marquee-container flex-col">
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+            </div>
+            <div class="marquee-container flex-col">
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+              <img src="assets/images/js.png" alt="" />
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="marque-full marque-full-2 flex-col">
+            <div class="marquee-container flex-col">
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+            </div>
+            <div class="marquee-container flex-col">
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+              <img src="assets/images/node.png" alt="" />
+            </div>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="marque-full marque-full-1 flex-col">
+            <div class="marquee-container flex-col">
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+            </div>
+            <div class="marquee-container flex-col">
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+              <img src="assets/images/react.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Locomotive -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
     <!-- Gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
