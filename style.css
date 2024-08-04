@@ -132,10 +132,6 @@ main {
   margin-top: 5vw;
 }
 
-.home-text-container :nth-child(2),
-.home-text-container :nth-child(3) {
-}
-
 .home-text {
   width: fit-content;
   position: relative;

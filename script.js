@@ -206,9 +206,22 @@ function projectsSectionAnimation() {
       scrub: 2,
       start: "top 0%",
       end: "top -100%",
-      // pinSpacing: false,
     },
   });
+
+  textColorChangeAnimation(
+    aboutHeadingDiv,
+    "mouseenter",
+    ".about-heading-1 span",
+    "#ff7d7b"
+  );
+
+  textColorChangeAnimation(
+    aboutHeadingDiv,
+    "mouseleave",
+    ".about-heading-1 span",
+    "#fefefe"
+  );
 }
 
 function skillsAnimation() {
