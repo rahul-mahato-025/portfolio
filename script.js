@@ -181,21 +181,19 @@ function aboutPageAnimation() {
 function projectsSectionAnimation() {
   projectsHeading.innerHTML = addSpanToLetters(projectsHeading.textContent);
 
-  projectsHeading.addEventListener("mouseenter", function () {
-    gsap.to(".projects-intro h1 span", {
-      fontSize: "6vw",
-      duration: 0.2,
-      stagger: 0.03,
-    });
-  });
+  textColorChangeAnimation(
+    projectsHeading,
+    "mouseenter",
+    ".projects-intro h1 span",
+    "#357ef5"
+  );
 
-  projectsHeading.addEventListener("mouseleave", function () {
-    gsap.to(".projects-intro h1 span", {
-      fontSize: "5vw",
-      duration: 0.2,
-      stagger: 0.03,
-    });
-  });
+  textColorChangeAnimation(
+    projectsHeading,
+    "mouseleave",
+    ".projects-intro h1 span",
+    "#130b1c"
+  );
 
   gsap.to(".scroll-item", {
     transform: "translateX(-100%)",
